@@ -1,0 +1,137 @@
+﻿
+.addon-area {
+    padding: 10px 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1.addon-title {
+    font-size: 7rem;
+    font-family: "Poppins";
+    font-weight: bolder;
+    color: white;
+    margin-top: 20px;
+}
+
+.card {
+    box-shadow: 0 0 20px rgba(29, 29, 29, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25em;
+    background-color: rgb(32, 32, 32);
+    min-width: inherit;
+}
+
+.img1 img {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 175px;
+    max-height: 175px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-color: rgb(0, 0, 0);
+    background-size: cover; /* or contain depending on what you want */
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.main-text {
+    padding: 30px 0;
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+}
+
+    .main-text:hover {
+    }
+
+    .main-text:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(50, 50, 50, 0.4), rgba(10, 10, 10, 0.8));
+        z-index: 2;
+        transition: 0.4s all;
+        opacity: 0;
+    }
+
+    .main-text:hover:before {
+        opacity: 1;
+        filter: blur(2px);
+    }
+
+    .main-text .info {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        color: #fff;
+        opacity: 0;
+        transition: 0.4s all;
+        transform: translateY(30px);
+    }
+
+
+
+        .main-text .info a {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+            font-family: "Poppins";
+            background: rgba(50, 50, 50, 0.9);
+            border: 2px solid rgb(32, 32, 32);
+            transition: 0.3s all;
+        }
+
+            .main-text .info a:hover {
+                background: rgba(40, 40, 40, 1);
+                transition: 0.3s all;
+            }
+
+    .main-text:hover .info {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .main-text h2 {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 18px;
+        margin: 0 0 20px;
+    }
+
+.text-bubble {
+    font-family: "Poppins";
+    font-size: 14px;
+    height: auto;
+}
+
+    .text-bubble p {
+        font-family: "Poppins";
+        font-size: bold;
+        color: white !important;
+        background-color: rgba(45, 45, 45, 0.6) !important;
+        text-align: center;
+        border: 1px solid rgb(30, 30, 30);
+        transform: translateY(20px);
+        transition: 0.3s all;
+    }
+
+        .text-bubble p:hover {
+            transition: 0.3s all;
+            background-color: rgba(28, 28, 28, 1) !important;
+            cursor: default;
+        }
+
+.main-text p {
+    font-size: 16px;
+    padding: 0 25px;
+    color: rgb(128, 128, 128);
+    overflow-y: hidden;
+}
