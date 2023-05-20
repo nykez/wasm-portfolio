@@ -9,6 +9,8 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.Configure<AboutMe>(builder.Configuration.GetSection("Person"));
+builder.Services.Configure<List<Project>>(builder.Configuration.GetSection("Projects"));
+
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 

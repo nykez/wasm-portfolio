@@ -1,4 +1,37 @@
-﻿<h3>Projects</h3>
+﻿@page "/projects";
+@using Microsoft.Extensions.Options;
+@using Portfolio.Models;
+@inject IOptions<List<Project>> config
+
+<div class="container">
+
+    <div class="row">
+        <small class="text-muted text-center">not all projects are listed.. (work in progress)</small>
+
+        <div class="col-sm-12 animate__animated animate__fadeInLeft">
+            @foreach(var item in config.Value)
+            {
+                <div class="box">
+                    <img src="@item.Image" />
+                    <!-- title -->
+                    <h1 class="text-center title">@item.Name</h1>
+                    <!-- tags/badges -->
+                    <div class="row">
+                        <div class="col-12 overflow-auto">
+                            <div class="d-flex flex-wrap gap-1 justify-content-center mt-1 mb-1">
+                                @foreach(var tag in item.Tags)
+                                {
+                                    <span class="badge bg-secondary mx-1 badge-hover">@tag.Name</span>
+                                }
+                            </div>
+                            <p class="multi_lines_text">@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
 
 @code {
 

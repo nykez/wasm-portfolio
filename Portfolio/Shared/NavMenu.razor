@@ -8,20 +8,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink='' routerLinkActive="active">home</a>
+                        <a class="nav-link" href="/">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink='/addons' routerLinkActive="active">addons</a>
+                        <a class="nav-link" href="/projects">addons</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink='/projects' routerLinkActive="active">projects</a>
+                        <a class="nav-link" href="/projects">projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink='/blogs' (click)="onNavigate()">stats</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/nykez">stats</a>
                     </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link"routerLink='/blogs' (click)="onNavigate()">blog</a>
-                    </li> -->
                 </ul>
             </div>
         </div>
