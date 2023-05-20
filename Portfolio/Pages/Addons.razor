@@ -24,12 +24,14 @@ else
 
         @foreach (var addon in Addon)
         {
+             @if (!addon.Active) continue;
+
             <div class="col-sm-4 mb-2 animate__animated animate__fadeInDown">
                 <div class="card">
                     <div class="img1"><img src="@addon!.Images!.BigSpot" alt="image"></div>
                     <div class="main-text">
                         <div class="info">
-                            <a class="btn btn-primary" href={{addon.route}} target="_blank">Learn More</a>
+                            <a class="btn btn-primary" href="@addon.Route" target="_blank">Learn More</a>
                             <div class="row">
                                 <div class="col-12 text-bubble mt-1">
                                     <p>created @addon.CreatedAt -/5 stars</p>
